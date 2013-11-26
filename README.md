@@ -1,9 +1,16 @@
 # ~
 
-    brew install vim
     git submodule init
     git submodule update
     sh install.sh
+
+## Brew
+
+    brew install vim
+    brew install ack
+    brew install python
+    pip install virtualenv
+    pip install virtualenvwrapper
 
 ## Credit
 
