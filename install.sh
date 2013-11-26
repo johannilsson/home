@@ -5,7 +5,7 @@ cutstring="DO NOT EDIT BELOW THIS LINE"
 # Move Pathogen
 ln -s $PWD/vim/pathogen/autoload/pathogen.vim $PWD/vim/autoload/pathogen.vim
 
-for name in *; do
+for name in `ls | grep -v README.md`; do
   target="$HOME/.$name"
   if [ -e "$target" ]; then
     if [ ! -L "$target" ]; then
