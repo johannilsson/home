@@ -1,9 +1,20 @@
 TERM=linux
  
+# Easier listing.
 alias "ls= ls -G"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Trim new lines and copy to clipboard
+alias c="tr -d '\n' | pbcopy"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Shortcuts
+alias d="cd ~/Dropbox"
+alias dl="cd ~/Downloads"
 
 # Python & Virtualenv
 alias python=/usr/local/bin/python2
