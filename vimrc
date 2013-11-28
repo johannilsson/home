@@ -73,6 +73,10 @@ au BufNewFile,BufRead *.coffee                   set filetype=coffee
 " Cold Fusion [bleh]
 au BufNewFile,BufRead *.cfm                      set filetype=html
 
+" Markdown
+au BufRead,BufNewFile *.md                       set filetype=markdown
+
+
 " File type settings 
 
 autocmd FileType ruby  setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
