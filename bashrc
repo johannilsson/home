@@ -16,6 +16,10 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 
+# App Engine
+alias aeu="appcfg.py update"
+alias aeb="appcfg.py backends"
+
 # Python & Virtualenv
 alias python=/usr/local/bin/python2
 
