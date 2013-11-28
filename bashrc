@@ -36,8 +36,10 @@ else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
 
-# Git completion
+# Git
 source /usr/local/git/contrib/completion/git-completion.bash
+source /usr/local/git/contrib/completion/git-prompt.sh
  
 # https://coderwall.com/p/lo43aq
-#export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}$(__git_ps1 :%s)\007"'
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}$(__git_ps1 :%s)\007"'
+
