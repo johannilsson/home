@@ -25,6 +25,14 @@ set cursorline                              " Highlight current line
 set list                                    " Show hidden characetrs
 set listchars=tab:☆\ ,eol:¬                 " Set hidden display characters
 
+" highlight trailing whitespace in red
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 highlight NonText ctermfg=235
 highlight SpecialKey ctermfg=235
 
