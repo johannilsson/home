@@ -1,5 +1,5 @@
 TERM=linux
- 
+
 # Easier listing.
 alias "ls= ls -G"
 alias ll='ls -alF'
@@ -20,6 +20,9 @@ alias dl="cd ~/Downloads"
 alias aeu="appcfg.py update"
 alias aeb="appcfg.py backends"
 
+# Local bin
+export PATH=~/.bin/:$PATH
+
 # Python & Virtualenv
 alias python=/usr/local/bin/python2
 
@@ -39,7 +42,7 @@ fi
 # Git
 source /usr/local/git/contrib/completion/git-completion.bash
 source /usr/local/git/contrib/completion/git-prompt.sh
- 
+
 # https://coderwall.com/p/lo43aq
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}$(__git_ps1 :%s)\007"'
 
