@@ -12,6 +12,17 @@
     pip install virtualenv
     pip install virtualenvwrapper
 
+## Vim
+
+### Command-T
+
+To get command-t to run.
+
+    cd vim/bundle/Command-T/ruby/command-t
+    ruby extconf.rb
+    make
+
 ## Credit
 
 Based on the ~ of [Jordan Santell](https://github.com/jsantell/home).
+
