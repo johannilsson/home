@@ -22,7 +22,7 @@ alias aeu="appcfg.py update"
 alias aeb="appcfg.py backends"
 
 # Local bin
-export PATH=~/.bin/:$PATH
+export PATH=~/.bin:$PATH
 
 # Python & Virtualenv
 alias python=/usr/local/bin/python2
