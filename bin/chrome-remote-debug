@@ -1,0 +1,4 @@
+#!/bin/sh
+adb forward tcp:9222 localabstract:chrome_devtools_remote
+
+echo "Now go to http://localhost:9222/"
