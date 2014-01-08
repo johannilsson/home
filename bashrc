@@ -15,6 +15,7 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Shortcuts
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
+alias p="cd ~/projects"
 
 # App Engine
 alias aeu="appcfg.py update"
