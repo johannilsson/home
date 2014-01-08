@@ -27,7 +27,11 @@ export PATH=~/.bin:$PATH
 # Python & Virtualenv
 alias python=/usr/local/bin/python2
 
-PATH=${PATH}:/usr/local/share/python
+export PATH=/usr/local/bin:$PATH
+
+#export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+
+#PATH=${PATH}:/usr/local/share/python
 
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
