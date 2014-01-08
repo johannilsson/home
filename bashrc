@@ -44,6 +44,13 @@ else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
 
+### Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+### Android
+export PATH="~/android-sdk/platform-tools:$PATH"
+alias logcat="adb logcat  | logcat-color"
+
 # Git
 source /usr/local/git/contrib/completion/git-completion.bash
 source /usr/local/git/contrib/completion/git-prompt.sh
