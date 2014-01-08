@@ -1,5 +1,7 @@
 call pathogen#infect()
 
+set encoding=utf8
+
 " Control
 set ts=2                                    " tabstop: Set tab size
 set sw=2                                    " shiftwidth: size in spaces of indentation
@@ -14,6 +16,7 @@ set background=dark                         " Set theme mode
 colorscheme AcidCupcakeColourScheme/acidcupcake                     " Set theme
 let &t_Co=256                               " Enable 256 colours
 hi CursorLine cterm=NONE ctermfg=NONE ctermbg=235 guibg=#222222
+set showmatch
 
 filetype on
 filetype plugin on
@@ -85,13 +88,14 @@ au BufNewFile,BufRead *.cfm                      set filetype=html
 au BufRead,BufNewFile *.md                       set filetype=markdown
 
 
-" File type settings 
+" File type settings
 
 autocmd FileType ruby  setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-autocmd FileType html  setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+"autocmd FileType html  setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType eruby setlocal tabstop=2 shiftwidth=2
 autocmd FileType coffee setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 hi link coffeeSpaceError NONE
 hi link coffeeSemicolonError NONE
@@ -103,13 +107,17 @@ hi link coffeeReservedError NONE
 
 let mapleader = ';'
 
+" indentLine
+let g:indentLine_color_term = 235
+
 " vim Powerline
 let g:Powerline_symbols = 'fancy'
 
 " JSHint
-highlight JSLintError ctermbg=235
+highlight JSHintError ctermbg=52
 map <Leader>o :copen<cr>
 map <Leader>p :cclose<cr>
+" let g:JSHintHighlightErrorLine = 0
 
 " Remap Ack
 nnoremap <Leader>a :Ack
