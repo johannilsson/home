@@ -18,9 +18,9 @@
 
 To get command-t to run.
 
-    cd ~/.vim/bundle/command-t¬
-    bundle install¬
-    rake make¬
+    cd ~/.vim/bundle/command-t
+    bundle install
+    rake make
 
     cd vim/bundle/Command-T/ruby/command-t
     ruby extconf.rb
