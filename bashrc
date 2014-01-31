@@ -25,7 +25,7 @@ alias aeb="appcfg.py backends"
 export PATH=~/.bin:$PATH
 
 # Python & Virtualenv
-alias python=/usr/local/bin/python2
+#alias python=/usr/local/bin/python2
 
 export PATH=/usr/local/bin:$PATH
 
@@ -33,7 +33,7 @@ export PATH=/usr/local/bin:$PATH
 
 #PATH=${PATH}:/usr/local/share/python
 
-export WORKON_HOME=$HOME/.virtualenvs
+export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
@@ -49,6 +49,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Android
 export PATH="~/android-sdk/platform-tools:$PATH"
+export PATH="~/android-sdk/tools/:$PATH"
 alias logcat="adb logcat  | logcat-color"
 
 # Git
@@ -57,4 +58,9 @@ source /usr/local/git/contrib/completion/git-prompt.sh
 
 # https://coderwall.com/p/lo43aq
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}$(__git_ps1 :%s)\007"'
+
+# Not running mysql from homebrew, need to fix.
+export PATH="/usr/local/mysql/bin:$PATH"
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
+
 
