@@ -1,0 +1,1 @@
+find . -name $1 | tar -cf - -T - | gzip -cf > $1.tar.gz
