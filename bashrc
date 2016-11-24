@@ -49,18 +49,24 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Android
 export PATH="~/android-sdk/platform-tools:$PATH"
-export PATH="~/android-sdk/tools/:$PATH"
+export PATH="~/android-sdk/tools:$PATH"
 alias logcat="adb logcat  | logcat-color"
 
 # Git
-source /usr/local/git/contrib/completion/git-completion.bash
-source /usr/local/git/contrib/completion/git-prompt.sh
+#source /usr/local/git/contrib/completion/git-completion.bash
+#source /usr/local/git/contrib/completion/git-prompt.sh
+source ~/git-completion.bash
+
+
+#export PATH="~/google-cloud-sdk/bin:$PATH"
+
+source ~/google-cloud-sdk/path.bash.inc
+source ~/google-cloud-sdk/completion.bash.inc
 
 # https://coderwall.com/p/lo43aq
-export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}$(__git_ps1 :%s)\007"'
+#export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}$(__git_ps1 :%s)\007"'
 
 # Not running mysql from homebrew, need to fix.
-export PATH="/usr/local/mysql/bin:$PATH"
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
-
+#export PATH="/usr/local/mysql/bin:$PATH"
+#export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
