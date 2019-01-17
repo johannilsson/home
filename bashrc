@@ -17,24 +17,14 @@ alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias p="cd ~/projects"
 
-# App Engine
-alias aeu="appcfg.py update"
-alias aeb="appcfg.py backends"
-
 # Local bin
 export PATH=~/.bin:$PATH
 
-# Python & Virtualenv
-#alias python=/usr/local/bin/python2
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-export PATH=/usr/local/bin:$PATH
-
-#export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-
-#PATH=${PATH}:/usr/local/share/python
-
+# Python
 export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
@@ -44,30 +34,23 @@ else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
 
-### Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 ### Android
-export PATH="~/android-sdk/platform-tools:$PATH"
-export PATH="~/android-sdk/tools:$PATH"
-alias logcat="adb logcat  | logcat-color"
+export PATH="~/Library/Android/sdk/platform-tools:$PATH"
+export PATH="~/Library/Android/sdk/tools:$PATH"
+#alias logcat="adb logcat  | logcat-color"
 
 # Git
 #source /usr/local/git/contrib/completion/git-completion.bash
 #source /usr/local/git/contrib/completion/git-prompt.sh
-source ~/git-completion.bash
+#source ~/git-completion.bash
 
-
-#export PATH="~/google-cloud-sdk/bin:$PATH"
-
-source ~/google-cloud-sdk/path.bash.inc
-source ~/google-cloud-sdk/completion.bash.inc
 
 # https://coderwall.com/p/lo43aq
 #export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}$(__git_ps1 :%s)\007"'
 
-# Not running mysql from homebrew, need to fix.
-#export PATH="/usr/local/mysql/bin:$PATH"
-#export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
+# Google Cloud
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
+
 
 
