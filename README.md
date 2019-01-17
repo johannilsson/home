@@ -4,13 +4,23 @@
     git submodule update
     sh install.sh
 
-## Brew
+## General
 
+    brew install google-cloud-sdk
     brew install vim
     brew install ack
+
+## Python
+
     brew install python
-    pip install virtualenv
-    pip install virtualenvwrapper
+    pip3 install virtualenv
+    pip3 install virtualenvwrapper
+    brew install python@2
+
+
+Use virtualenv to create environments
+
+    mkvirtualenv -p /usr/local/bin/python2.7 PROJECT
 
 ## Vim
 
