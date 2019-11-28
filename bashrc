@@ -34,16 +34,20 @@ else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
 
-### Android
+# MySQL
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# For compilers
+# export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
+# export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
+
+# Android
 export PATH="~/Library/Android/sdk/platform-tools:$PATH"
+export PATH="~/Library/Android/sdk/tools/bin:$PATH"
 export PATH="~/Library/Android/sdk/tools:$PATH"
 #alias logcat="adb logcat  | logcat-color"
 
 # Git
-#source /usr/local/git/contrib/completion/git-completion.bash
-#source /usr/local/git/contrib/completion/git-prompt.sh
-#source ~/git-completion.bash
-
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # https://coderwall.com/p/lo43aq
 #export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}$(__git_ps1 :%s)\007"'

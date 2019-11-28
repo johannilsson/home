@@ -6,9 +6,12 @@
 
 ## General
 
+    brew install git
+    brew install bash-completion
     brew install google-cloud-sdk
     brew install vim
     brew install ack
+    brew install mysql@5.7
 
 ## Python
 
